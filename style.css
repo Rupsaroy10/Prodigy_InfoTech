@@ -1,0 +1,766 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    text-shadow: .2rem;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --bg-color: #1f242d;
+    --second-bg-color: #323946;
+    --text-color: #fff;
+    --main-color: #0ef;
+}
+
+html {
+    font-size: 61.5%;
+    overflow-x: hidden;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+section {
+    min-height: 100vh;
+    color: var(--text-color);
+}
+
+/*NAVIGATRION*/
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background: var(--bg-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+header.sticky {
+    border-bottom: .1rem solid rgba(0, 0, 0, .2);
+}
+
+.logo {
+    font-size: 2.8rem;
+    color: var(--text-color);
+    font-weight: 600;
+    cursor: default;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style: oblique;
+    color: chartreuse;
+}
+
+.navbar a {
+    font-size: 2rem;
+    color: var(--text-color);
+    margin-left: 4rem;
+    transition: .3s;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style: oblique;
+    color: chartreuse;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: var(--main-color);
+}
+
+#manu-icon {
+    font-size: 3.6rem;
+    color: var(--text-color);
+    display: none;
+}
+
+/* home section*/
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 7rem;
+    padding-left: 3rem;
+}
+
+.home-img img {
+    width: 35vw;
+    animation: floatImage 4s ease-in-out infinite;
+    
+}
+
+@keyframes floatImage {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-2.5rem);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.home-content h3 {
+    font-size: 2.6rem;
+    font-weight: 800;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style: oblique;
+}
+
+.home-content h3:nth-of-type(2) {
+    margin-bottom: 2rem;
+}
+
+span {
+    color: var(--main-color) ;
+}
+
+.home-content h1 {
+    font-size: 5.1rem;
+    font-weight: bolder;
+    line-height: 1.2;
+    color: rgb(168, 209, 127);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: greenyellow;
+}
+
+.home-content p {
+    font-size: 1.6rem;
+    font-style: italic;
+    font-family: cursive;
+    color: white;
+    font-weight: 400;
+}
+
+.social-media a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background: transparent;
+    border: .2rem solid var(--main-color);
+    border-radius: 50%;
+    font-size: 2rem;
+    color: var(--main-color);
+    margin: 2.8rem 1.4rem 2.8rem 0;
+}
+
+.social-media a:hover {
+    background: var(--main-color);
+    color: var(--second-bg-color);
+    box-shadow: 0 0 1rem var(--main-color);
+
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 3rem;
+    background: var(--main-color);
+    border-radius: 4rem;
+    box-shadow: 0 0 1rem var(--main-color);
+    font-size: 1.7rem;
+    color: var(--second-bg-color);
+    letter-spacing: .1rem;
+    font-weight: bolder;
+    transition: .5s ease;
+    font-family: serif;
+}
+
+.btn:hover {
+    box-shadow: none;
+}
+
+/* About Section */
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    background: var(--second-bg-color);
+}
+
+.about-img img {
+    width: 35vw;
+}
+
+.heading {
+    text-align: center;
+    font-size: 4.9rem;
+    padding-top: 7rem;
+
+}
+
+.about-content h2 {
+    text-align: left;
+    line-height: 1.2;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.about-content h3 {
+    font-size: 2.6rem;
+    color:greenyellow;
+    font-family:serif;
+    font-weight: 300;
+}
+
+.about-content p {
+    font-size: 1.6rem;
+    margin: 1rem 0 2rem;
+    color: white;
+    font-weight: 400;
+    font-style: italic;
+    font-family: cursive;
+}
+
+.about-content ul li {
+    font-size: 1.2rem;
+    text-align: left;
+    margin-left: 1rem;
+    color: white;
+    font-weight: 500;
+    font-style: italic;
+    font-family: cursive;
+}
+
+/*skill design */
+.skills {
+    min-height: auto;
+    padding-bottom: 7rem;
+    background: #3c3f47;
+    padding-right: 3rem;
+    padding-left: 3rem;
+    padding-top: 6rem;
+}
+.skills h2 {
+    font-size: 4.9rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.skills h3 {
+    color:greenyellow;
+    font-family:serif;
+}
+.skills .skills-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5rem;
+}
+
+.skills-row .skills-coloumn {
+    flex: 1 1 40rem;
+    padding-bottom: 4em;
+}
+
+.skills-coloumn .title {
+    font-size: 2.4rem;
+    margin: 0 0 1.5rem;
+}
+
+.skills-box .skills-content {
+    position: relative;
+    border: .4rem solid var(--bg-color);
+    border-radius: .6rem;
+    padding: .5rem 1.5rem;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.skills-box .skills-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--bg-color);
+    z-index: -1;
+    transition: .5s;
+}
+
+.skills-box .skills-content:hover::before {
+    width: 100%;
+}
+
+.skills-content .progress {
+    padding: 1rem 0;
+}
+
+.skills-content .progress h3 {
+    font-size: 1.6rem;
+    display: flex;
+    justify-content: space-between;
+    font-family: serif;
+}
+
+.skills-content .progress h3 span {
+    color:chartreuse;
+    font-family:serif;
+}
+
+.skills-content .progress .bar  {
+    height: 1.9rem;
+    border-radius: .6rem;
+    border: .2rem solid yellowgreen;
+    padding: .5rem;
+    margin: .9rem 0;
+}
+
+
+
+.skills-content .progress .bar span {
+    display: block;
+    height: 100%;
+    border-radius: .3rem;
+    background: rgb(183, 231, 87);
+}
+
+.skills-coloumn:nth-child(1) .skills-content .progress:nth-child(1) .bar span {
+    width: 90%;
+}
+
+.skills-coloumn:nth-child(1) .skills-content .progress:nth-child(2) .bar span {
+    width: 90%;
+}
+
+.skills-coloumn:nth-child(1) .skills-content .progress:nth-child(3) .bar span {
+    width: 80%;
+}
+
+.skills-coloumn:nth-child(1) .skills-content .progress:nth-child(4) .bar span {
+    width: 70%;
+}
+
+.skills-coloumn:nth-child(1) .skills-content .progress:nth-child(5) .bar span {
+    width: 75%;
+}
+
+.skills-coloumn:nth-child(1) .skills-content .progress:nth-child(6) .bar span {
+    width: 80%;
+}
+
+.skills-coloumn:nth-child(2) .skills-content .progress:nth-child(1) .bar span {
+    width: 85%;
+}
+
+.skills-coloumn:nth-child(2) .skills-content .progress:nth-child(2) .bar span {
+    width: 85%;
+}
+
+.skills-coloumn:nth-child(2) .skills-content .progress:nth-child(3) .bar span {
+    width: 95%;
+}
+
+.skills-coloumn:nth-child(2) .skills-content .progress:nth-child(4) .bar span {
+    width: 79%;
+}
+
+/*services section*/
+
+.Services h2 {
+    margin-bottom: 1rem;
+    padding-top: 6.3rem;
+    font-size: 4.9rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.services-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    grid-area: 3rem;
+}
+
+.services-container .services-box {
+    flex: 1 1 20rem;
+    background: var(--second-bg-color);
+    padding: 1.8rem 2rem 1.8rem;
+    border-radius: 5rem;
+    text-align: center;
+    border: 2rem solid var(--bg-color);
+    transition: .5s ease;
+}
+
+
+.services-container .services-box:hover {
+    border-color: var(--main-color);
+    transform: scale(1.02);
+
+}
+
+.services-box i {
+    font-size: 5.5rem;
+    color: var(--main-color);
+    font-family: serif;
+}
+
+.services-box h3 {
+    font-size: 3.5rem;
+    font-family: italic;
+    color: greenyellow;
+}
+
+.services-box p {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin: 1rem 0 3rem;
+    color: white;
+    font-family: cursive;
+    font-style: italic;
+
+}
+
+/*projects section design*/
+.Projects {
+    background: var(--second-bg-color);
+    padding-top: 6.3rem;
+    padding-right: 4rem;
+}
+
+.Projects h2 {
+    margin-bottom: 4rem;
+    font-size: 4.9rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.project-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    gap: 2.5rem;
+    padding-left: 4rem;
+    padding-top: 2rem;
+}
+
+.project-container .project-box {
+    position: relative;
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem var(--bg-color);
+    overflow: hidden;
+    display: flex;
+}
+
+.project-box img {
+    width: 100%;
+    transition: .5s ease;
+}
+
+.project-box:hover img {
+    transform: scale(1.1);
+}
+
+.project-box .project-layer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.1), var(--main-color));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 4rem;
+    transform: translateY(100%);
+    transition: .5s ease;
+}
+
+.project-box:hover .project-layer {
+    transform: translateY(0);
+}
+
+.project-layer h4 {
+    font-size: 3rem;
+    margin-top: 1rem;
+    font-family: italic;
+    color: chartreuse;
+    font-weight: 700;
+}
+
+.project-layer p {
+    font-size: 1.4rem;
+    letter-spacing: normal;
+    margin: .3rem 0 1rem;
+    font-weight: 900;
+    font-style: italic;
+    color: black;
+    font-family: cursive;
+}
+
+.project-layer a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 5rem;
+    background: var(--text-color);
+    border-radius: 100%;
+}
+
+.project-layer a i {
+    font-size: 1.7rem;
+    color: var(--second-bg-color);
+}
+
+/*contact design*/
+.contact h2 {
+    margin-bottom: 3rem;
+    padding-top: 6rem;
+    font-size: 4.9rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.contact form {
+    max-width: 70rem;
+    margin: 1rem auto;
+    text-align: center;
+    margin-bottom: 3rem;
+    padding-left: 10rem;
+    padding-right: 10rem;
+}
+
+.contact form .input-box {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact form .input-box input,
+.contact form textarea {
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.4rem;
+    color: var(--text-color);
+    background: var(--second-bg-color);
+    border-radius: .9rem;
+    margin: .7rem 0;
+    font-family: cursive;
+    font-style: italic;
+    color: #fff;
+}
+
+.contact form .input-box input {
+    width: 49%;
+}
+
+.contact form textarea {
+    resize: none;
+}
+
+.btn-contact {
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 2.8rem;
+    background: var(--main-color);
+    border-radius: 4rem;
+    box-shadow: 0 0 1rem var(--main-color);
+    font-size: 1.7rem;
+    color: var(--second-bg-color);
+    letter-spacing: .1rem;
+    font-weight: 900;
+    transition: .5s ease;
+    font-family: serif;
+}
+
+.btn-contact:hover {
+    box-shadow: none;
+}
+
+/*footer design*/
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem 9%;
+    background: var(--second-bg-color);
+    font-family: serif;
+    font-weight: bold;
+    color: chartreuse;
+}
+
+.footer-text a {
+    font-size: 1.6rem;
+}
+
+.footer-iconTop a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: .8rem;
+    background: var(--main-color);
+    border-radius: .8rem;
+    transition: .5s ease;
+}
+
+.footer-iconTop a:hover {
+    box-shadow: 0 0 1rem var(--main-color);
+}
+
+.footer-iconTop a i {
+    font-size: 2.4rem;
+    color: var(--second-bg-color);
+}
+
+/*breakpoints*/
+@media(max-width: 1200px) {
+    html {
+        font-size: 55%;
+    }
+}
+
+@media(max-width: 991px) {
+    .header {
+        padding: 2rem 3%;
+    }
+
+    section {
+        padding: 10rem 3% 2rem;
+    }
+
+
+    .Services {
+        padding-bottom: 6rem;
+    }
+
+    .skills {
+        min-height: auto;
+    }
+
+    .Projects {
+        padding-bottom: 6rem;
+    }
+
+    .contact {
+        min-height: auto;
+    }
+
+    .footer {
+        padding: 2rem 3%;
+    }
+}
+
+@media (max-width: 768px) {
+    #manu-icon {
+        display: block;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 3%;
+        background: var(--bg-color);
+        border-top: .1rem solid rgba(0, 0, 0, .2);
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+        display: none;
+    }
+
+
+    .navbar.active {
+        display: block;
+    }
+
+    .navbar a {
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+
+    .home {
+        flex-direction: column;
+    }
+
+    .home-content h3 {
+        font-size: 2.6rem;
+    }
+
+    .about-content h1 {
+        font-size: 5rem;
+    }
+
+    .home-img img {
+        width: 70vw;
+        margin-top: 3rem;
+    }
+
+    .about {
+        flex-direction: column-reverse;
+    }
+
+    .skills h2 {
+        margin-bottom: 3rem;
+    }
+
+    .about img {
+        width: 70vw;
+        margin-top: 3rem;
+    }
+
+    .Services h2 {
+        margin-bottom: 3rem;
+    }
+
+    .Projects h2 {
+        margin-bottom: 3rem;
+    }
+
+    .project-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 617px) {
+    .project-container {
+        grid-template-columns: 2fr;
+    }
+}
+
+@media (max-width: 450px) {
+    html {
+        font-size: 50%;
+
+    }
+
+
+    .contact form .input-box input {
+        width: 100%;
+    }
+}
+
+@media(max-width: 365px) {
+    .home-img img {
+        width: 90vw;
+    }
+
+    .about-img img {
+        width: 90vw;
+    }
+
+    .footer {
+        flex-direction: column-reverse;
+    }
+
+    .footer p {
+        text-align: center;
+        margin-top: 2rem;
+    }
+}
